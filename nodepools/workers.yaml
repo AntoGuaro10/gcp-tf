@@ -1,0 +1,13 @@
+name: np-worker
+node_machine_type: n2d-standard-4
+initial_node_count: 0
+min_node_count: 0
+max_node_count: 2
+tags: ["np-worker"]
+taint: application
+taint_value: "worker"
+taint_effect: "NO_SCHEDULE"
+labels: { application: "worker" }
+#locations: ["europe-west4-a","europe-west4-b"]
+locations: ["europe-west4-a"]
+node_preemptible: false
